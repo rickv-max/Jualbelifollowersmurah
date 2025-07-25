@@ -1,10 +1,8 @@
-// js/script.js (REVAMPED)
-
 document.addEventListener('DOMContentLoaded', () => {
 
     const whatsappNumber = '6285856618965';
 
-    // --- WhatsApp Button Logic (Sama seperti sebelumnya) ---
+    // --- WhatsApp Button Logic ---
     const orderButtons = document.querySelectorAll('.btn-pesan');
     orderButtons.forEach(button => {
         button.addEventListener('click', (e) => {
@@ -27,27 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- FAQ Accordion Logic (Sama seperti sebelumnya) ---
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-            const currentlyActive = document.querySelector('.faq-item.active');
-            if (currentlyActive && currentlyActive !== item) {
-                currentlyActive.classList.remove('active');
-                currentlyActive.querySelector('.faq-answer').style.maxHeight = 0;
-            }
-            item.classList.toggle('active');
-            const answer = item.querySelector('.faq-answer');
-            if (item.classList.contains('active')) {
-                answer.style.maxHeight = answer.scrollHeight + "px";
-            } else {
-                answer.style.maxHeight = 0;
-            }
-        });
-    });
-
-    // --- NEW: Sticky Header with Glassmorphism Effect ---
+    // --- Sticky Header Logic ---
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -56,24 +34,34 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.remove('scrolled');
         }
     });
+    
+    // --- NEW: Mobile Burger Menu Functionality ---
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    const navLinks = document.querySelectorAll('.main-nav a');
 
-    // --- NEW: Scroll Animation using Intersection Observer ---
-    const scrollElements = document.querySelectorAll('.scroll-animation');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                // Optional: unobserve after it's visible so it doesn't animate again
-                // observer.unobserve(entry.target);
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            
+            // Toggle aria-expanded attribute for accessibility
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+        });
+    }
+    
+    // --- Close menu when a link is clicked (good for single-page apps, but useful here too) ---
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+                menuToggle.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
             }
         });
-    }, {
-        threshold: 0.1 // Trigger when 10% of the element is visible
     });
 
-    scrollElements.forEach(el => {
-        observer.observe(el);
-    });
-
+    // Scroll animation and FAQ logic can be added here if needed,
+    // but the most critical part is the responsive navigation above.
 });
