@@ -664,3 +664,140 @@ body {
 [data-aos="fade-right"].aos-animate { transform: translateX(0); }
 [data-aos="fade-left"] { transform: translateX(30px); }
 [data-aos="fade-left"].aos-animate { transform: translateX(0); }
+/* ===== START: RESPONSIVE OVERRIDES (FOKUS HANYA PADA RESPONSIVITAS) ===== */
+
+/* Mencegah scroll pada body saat menu mobile terbuka */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* --- Breakpoint untuk Tablet (dan perangkat lebih kecil) --- */
+@media (max-width: 992px) {
+    .container {
+        padding-left: var(--space-lg);
+        padding-right: var(--space-lg);
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr; /* Hero menjadi 1 kolom */
+        text-align: center;
+        gap: var(--space-2xl);
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center; /* Tombol hero di tengah */
+    }
+
+    .hero-visual {
+        display: none; /* Menyembunyikan visual 3D yang kompleks di tablet ke bawah */
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Layanan menjadi 1 kolom */
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr); /* Statistik menjadi 2x2 */
+        gap: var(--space-xl);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr; /* Footer menjadi 1 kolom */
+        text-align: center;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+}
+
+
+/* --- Breakpoint untuk Mobile (dan perangkat lebih kecil) --- */
+@media (max-width: 768px) {
+    /* Ukuran font yang lebih adaptif untuk judul di mobile */
+    .hero-title { font-size: 2.5rem; }
+    .page-header h1 { font-size: 2.2rem; }
+    .section-title { font-size: 2rem; }
+
+    /* Menampilkan tombol menu hamburger */
+    .nav-toggle {
+        display: flex; /* Menggunakan flex untuk alignment yang lebih baik */
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Mengubah menu navigasi menjadi overlay dari samping */
+    .nav-menu {
+        position: fixed;
+        top: 80px; /* Tepat di bawah header */
+        right: -100%; /* Sembunyi di luar layar */
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: var(--white);
+        box-shadow: var(--shadow-2xl);
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
+        flex-direction: column; /* Mengubah arah item list */
+        padding-top: var(--space-2xl);
+    }
+
+    /* State aktif untuk menampilkan menu */
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-list {
+        flex-direction: column; /* Menu menjadi vertikal */
+        align-items: center;
+        gap: var(--space-2xl);
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+    }
+
+    .features-grid,
+    .testimonials-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr; /* Semua grid menjadi 1 kolom */
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr 1fr; /* Statistik tetap 2 kolom di mobile lanskap */
+    }
+
+    .step-item {
+        flex-direction: column; /* Langkah-langkah menjadi vertikal */
+        align-items: center;
+        text-align: center;
+    }
+
+    .step-number {
+        margin-bottom: var(--space-md);
+    }
+}
+
+
+/* --- Breakpoint untuk Mobile Sangat Kecil --- */
+@media (max-width: 480px) {
+    .container {
+        padding-top: var(--space-2xl);
+        padding-bottom: var(--space-2xl);
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr; /* Statistik menjadi 1 kolom di layar sangat sempit */
+    }
+
+    .btn-primary, .btn-secondary, .btn-pesan {
+        width: 100%; /* Tombol memenuhi lebar agar mudah di-tap */
+        padding: var(--space-md) var(--space-lg);
+    }
+}
+
+/* ===== END: RESPONSIVE OVERRIDES ===== */
