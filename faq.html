@@ -5,65 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ - Kios Sosmed</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">Kios Sosmed</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="instagram.html">Instagram</a></li>
-                    <li><a href="tiktok.html">TikTok</a></li>
-                    <li><a href="cara-order.html">Cara Order</a></li>
-                    <li><a href="faq.html" class="active">FAQ</a></li>
+    <!-- Modern Navigation -->
+    <header class="modern-header">
+        <nav class="nav-container">
+            <a href="index.html" class="modern-logo"><span class="logo-icon">🚀</span><span class="logo-text">Kios<span class="accent">Sosmed</span></span></a>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="instagram.html" class="nav-link">Instagram</a></li>
+                    <li><a href="tiktok.html" class="nav-link">TikTok</a></li>
+                    <li><a href="cara-order.html" class="nav-link">Cara Order</a></li>
+                    <li><a href="faq.html" class="nav-link active">FAQ</a></li>
                 </ul>
-            </nav>
-            <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-            </button>
-        </div>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Buka menu"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+        </nav>
     </header>
 
-    <main>
+    <!-- Main Content -->
+    <main class="main-content">
         <div class="container">
-            <div class="page-header anim-fade-in">
+            <div class="page-header" data-aos="fade-up">
                 <h1>Tanya Jawab</h1>
                 <p>Jawaban untuk pertanyaan yang paling sering diajukan.</p>
             </div>
 
-            <div class="faq-container">
-                <div class="faq-item anim-fade-in">
+            <div class="faq-container" data-aos="fade-up" data-aos-delay="100">
+                <div class="faq-item">
                     <div class="faq-question">Apakah proses ini aman untuk akun saya? <span class="faq-toggle">+</span></div>
                     <div class="faq-answer"><p>Tentu saja. Proses kami 100% aman karena kami tidak pernah meminta password atau akses login ke akun Anda. Kami hanya membutuhkan username atau link postingan.</p></div>
                 </div>
-                <div class="faq-item anim-fade-in">
+                <div class="faq-item">
                     <div class="faq-question">Berapa lama proses pengerjaannya?<span class="faq-toggle">+</span></div>
                     <div class="faq-answer"><p>Proses pengerjaan biasanya dimulai dalam 1-3 jam setelah pembayaran dikonfirmasi. Kecepatan pengiriman bervariasi tergantung jenis layanan dan jumlah pesanan.</p></div>
                 </div>
-                <div class="faq-item anim-fade-in">
+                <div class="faq-item">
                     <div class="faq-question">Apakah followers/likes bisa hilang (drop)?<span class="faq-toggle">+</span></div>
-                    <div class="faq-answer"><p>Sebagian kecil followers/likes mungkin mengalami penurunan alami (drop). Namun, kami menggunakan layanan berkualitas tinggi untuk meminimalkan hal tersebut dan beberapa layanan memiliki garansi.</p></div>
+                    <div class="faq-answer"><p>Sebagian kecil followers/likes mungkin mengalami penurunan alami (drop). Namun, kami menggunakan layanan berkualitas tinggi untuk meminimalkan hal tersebut.</p></div>
                 </div>
-                 <div class="faq-item anim-fade-in">
+                 <div class="faq-item">
                     <div class="faq-question">Metode pembayaran apa saja yang tersedia?<span class="faq-toggle">+</span></div>
-                    <div class="faq-answer"><p>Kami menerima pembayaran melalui transfer Bank dan E-Wallet (GoPay, OVO, DANA, ShopeePay). Informasi rekening lengkap akan diberikan oleh Admin saat pemesanan melalui WhatsApp.</p></div>
+                    <div class="faq-answer"><p>Kami menerima pembayaran melalui transfer Bank dan E-Wallet (GoPay, OVO, DANA, ShopeePay). Informasi lengkap akan diberikan oleh Admin saat pemesanan.</p></div>
                 </div>
-                <div class="faq-item anim-fade-in">
+                <div class="faq-item">
                     <div class="faq-question">Bagaimana jika pesanan saya tidak masuk?<span class="faq-toggle">+</span></div>
-                    <div class="faq-answer"><p>Kami memberikan GARANSI 100% UANG KEMBALI. Jika pesanan Anda terbukti tidak masuk dalam waktu 3x24 jam setelah pembayaran dikonfirmasi, hubungi admin kami untuk pengembalian dana penuh.</p></div>
+                    <div class="faq-answer"><p>Kami memberikan GARANSI 100% UANG KEMBALI. Jika pesanan Anda tidak masuk dalam waktu 3x24 jam, hubungi admin kami untuk pengembalian dana penuh.</p></div>
                 </div>
             </div>
         </div>
     </main>
     
-    <footer>
-        <div class="container">
-            <a href="index.html" class="logo">Kios Sosmed</a>
-            <p class="garansi-text">GARANSI 3X24 JAM ORDER TIDAK MASUK ADA PENGEMBALIAN DANA 100%</p>
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand"><a href="index.html" class="footer-logo"><span class="logo-icon">🚀</span><span class="logo-text">Kios<span class="accent">Sosmed</span></span></a><p class="footer-description">Layanan media sosial premium terpercaya.</p></div>
+                <div class="link-group"><h4>Services</h4><a href="instagram.html">Instagram</a><a href="tiktok.html">TikTok</a></div>
+                <div class="link-group"><h4>Support</h4><a href="cara-order.html">Cara Order</a><a href="faq.html">FAQ</a></div>
+            </div>
+            <div class="footer-bottom"><p class="footer-guarantee">🛡️ GARANSI 100% UANG KEMBALI</p><p>© 2024 Kios Sosmed. All rights reserved.</p></div>
         </div>
     </footer>
 
