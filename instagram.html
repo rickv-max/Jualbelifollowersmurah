@@ -4,110 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layanan Instagram - Kios Sosmed</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header>
         <div class="container">
-        <a href="index.html" class="logo">Kios Sosmed</a>
+            <a href="index.html" class="logo">Kios Sosmed</a>
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="instagram.html" class="active">Layanan Instagram</a></li>
-                    <li><a href="tiktok.html">Layanan TikTok</a></li>
+                    <li><a href="instagram.html" class="active">Instagram</a></li>
+                    <li><a href="tiktok.html">TikTok</a></li>
                     <li><a href="cara-order.html">Cara Order</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                 </ul>
             </nav>
             <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
         </div>
     </header>
 
     <main>
-        <div class="container page-title">
-            <h1>Pricelist Layanan Instagram</h1>
+        <div class="container">
+            <div class="page-header anim-fade-in">
+                <h1>Layanan Instagram</h1>
+                <p>Pilih paket terbaik untuk meningkatkan interaksi akun Anda.</p>
+            </div>
+
+            <h2 class="section-title anim-fade-in">Followers</h2>
+            <div class="pricelist-grid">
+                <div class="pricelist-card anim-fade-in"><div class="badge">Populer</div><h3>500 Followers</h3><p class="harga">28k</p><button class="btn-pesan" data-paket="500 Followers Instagram" data-harga="28k" data-tipe="followers">Pesan Sekarang</button></div>
+                <div class="pricelist-card anim-fade-in"><h3>1000 Followers</h3><p class="harga">56k</p><button class="btn-pesan" data-paket="1000 Followers Instagram" data-harga="56k" data-tipe="followers">Pesan Sekarang</button></div>
+                <div class="pricelist-card anim-fade-in"><h3>1500 Followers</h3><p class="harga">84k</p><button class="btn-pesan" data-paket="1500 Followers Instagram" data-harga="84k" data-tipe="followers">Pesan Sekarang</button></div>
+                <div class="pricelist-card anim-fade-in"><h3>2000 Followers</h3><p class="harga">112k</p><button class="btn-pesan" data-paket="2000 Followers Instagram" data-harga="112k" data-tipe="followers">Pesan Sekarang</button></div>
+                <div class="pricelist-card anim-fade-in"><h3>2500 Followers</h3><p class="harga">140k</p><button class="btn-pesan" data-paket="2500 Followers Instagram" data-harga="140k" data-tipe="followers">Pesan Sekarang</button></div>
+                <div class="pricelist-card anim-fade-in"><h3>3000 Followers</h3><p class="harga">168k</p><button class="btn-pesan" data-paket="3000 Followers Instagram" data-harga="168k" data-tipe="followers">Pesan Sekarang</button></div>
+            </div>
+
+            <h2 class="section-title anim-fade-in">Likes</h2>
+            <div class="pricelist-grid">
+                <div class="pricelist-card anim-fade-in"><h3>500 Likes</h3><p class="harga">5k</p><button class="btn-pesan" data-paket="500 Likes Instagram" data-harga="5k" data-tipe="likes">Pesan Sekarang</button></div>
+                <div class="pricelist-card anim-fade-in"><h3>1000 Likes</h3><p class="harga">10k</p><button class="btn-pesan" data-paket="1000 Likes Instagram" data-harga="10k" data-tipe="likes">Pesan Sekarang</button></div>
+                <div class="pricelist-card anim-fade-in"><h3>2000 Likes</h3><p class="harga">20k</p><button class="btn-pesan" data-paket="2000 Likes Instagram" data-harga="20k" data-tipe="likes">Pesan Sekarang</button></div>
+            </div>
+            
+            <h2 class="section-title anim-fade-in">Views Reels</h2>
+            <div class="pricelist-grid">
+                 <div class="pricelist-card anim-fade-in"><h3>1000 Views</h3><p class="harga">3k</p><button class="btn-pesan" data-paket="1000 Views Reels" data-harga="3k" data-tipe="views">Pesan Sekarang</button></div>
+                 <div class="pricelist-card anim-fade-in"><h3>10000 Views</h3><p class="harga">30k</p><button class="btn-pesan" data-paket="10000 Views Reels" data-harga="30k" data-tipe="views">Pesan Sekarang</button></div>
+                 <div class="pricelist-card anim-fade-in"><h3>20000 Views</h3><p class="harga">60k</p><button class="btn-pesan" data-paket="20000 Views Reels" data-harga="60k" data-tipe="views">Pesan Sekarang</button></div>
+            </div>
+
+            <h2 class="section-title anim-fade-in">Paket Spesial</h2>
+            <div class="paket-hemat-card anim-fade-in">
+                <div class="badge hemat">Hemat!</div>
+                <h3>Paket Booster IG</h3>
+                <p class="harga">90k</p>
+                <ul><li>1000 Followers</li><li>2000 Likes</li><li>+ Bonus 5rb Views</li></ul>
+                <button class="btn-pesan" data-paket="Paket Hemat Instagram" data-harga="90k" data-tipe="paket-ig">Pesan Paket Ini</button>
+            </div>
         </div>
-
-        <!-- Followers -->
-        <section class="pricelist-section scroll-animation">
-            <div class="container">
-                <h2>Followers Instagram</h2>
-                <div class="pricelist-grid">
-                    <div class="pricelist-item"><span>500 Followers</span> <span class="harga">28k</span> <button class="btn-pesan" data-paket="500 Followers Instagram" data-harga="28k" data-tipe="followers">Pesan Sekarang</button></div>
-                    <div class="pricelist-item"><span>1000 Followers</span> <span class="harga">56k</span> <button class="btn-pesan" data-paket="1000 Followers Instagram" data-harga="56k" data-tipe="followers">Pesan Sekarang</button></div>
-                    <div class="pricelist-item"><span>1500 Followers</span> <span class="harga">84k</span> <button class="btn-pesan" data-paket="1500 Followers Instagram" data-harga="84k" data-tipe="followers">Pesan Sekarang</button></div>
-                    <div class="pricelist-item"><span>2000 Followers</span> <span class="harga">112k</span> <button class="btn-pesan" data-paket="2000 Followers Instagram" data-harga="112k" data-tipe="followers">Pesan Sekarang</button></div>
-                    <div class="pricelist-item"><span>2500 Followers</span> <span class="harga">140k</span> <button class="btn-pesan" data-paket="2500 Followers Instagram" data-harga="140k" data-tipe="followers">Pesan Sekarang</button></div>
-                    <div class="pricelist-item"><span>3000 Followers</span> <span class="harga">168k</span> <button class="btn-pesan" data-paket="3000 Followers Instagram" data-harga="168k" data-tipe="followers">Pesan Sekarang</button></div>
-                    <div class="pricelist-item"><span>5000 Followers</span> <span class="harga">280k</span> <button class="btn-pesan" data-paket="5000 Followers Instagram" data-harga="280k" data-tipe="followers">Pesan Sekarang</button></div>
-                    <div class="pricelist-item"><span>10000 Followers</span> <span class="harga">560k</span> <button class="btn-pesan" data-paket="10000 Followers Instagram" data-harga="560k" data-tipe="followers">Pesan Sekarang</button></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Likes -->
-        <section class="pricelist-section scroll-animation">
-            <div class="container">
-                <h2>Likes Instagram</h2>
-                <div class="pricelist-grid">
-                    <div class="pricelist-item"><span>500 Likes</span> <span class="harga">5k</span> <button class="btn-pesan" data-paket="500 Likes Instagram" data-harga="5k" data-tipe="likes">Pesan Sekarang</button></div>
-                    <div class="pricelist-item"><span>1000 Likes</span> <span class="harga">10k</span> <button class="btn-pesan" data-paket="1000 Likes Instagram" data-harga="10k" data-tipe="likes">Pesan Sekarang</button></div>
-                    <div class="pricelist-item"><span>2000 Likes</span> <span class="harga">20k</span> <button class="btn-pesan" data-paket="2000 Likes Instagram" data-harga="20k" data-tipe="likes">Pesan Sekarang</button></div>
-                    <div class="pricelist-item"><span>3000 Likes</span> <span class="harga">30k</span> <button class="btn-pesan" data-paket="3000 Likes Instagram" data-harga="30k" data-tipe="likes">Pesan Sekarang</button></div>
-                    <div class="pricelist-item"><span>5000 Likes</span> <span class="harga">50k</span> <button class="btn-pesan" data-paket="5000 Likes Instagram" data-harga="50k" data-tipe="likes">Pesan Sekarang</button></div>
-                    <div class="pricelist-item"><span>10000 Likes</span> <span class="harga">100k</span> <button class="btn-pesan" data-paket="10000 Likes Instagram" data-harga="100k" data-tipe="likes">Pesan Sekarang</button></div>
-                    <div class="pricelist-item"><span>15000 Likes</span> <span class="harga">150k</span> <button class="btn-pesan" data-paket="15000 Likes Instagram" data-harga="150k" data-tipe="likes">Pesan Sekarang</button></div>
-                    <div class="pricelist-item"><span>20000 Likes</span> <span class="harga">200k</span> <button class="btn-pesan" data-paket="20000 Likes Instagram" data-harga="200k" data-tipe="likes">Pesan Sekarang</button></div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Views Reels -->
-        <section class="pricelist-section scroll-animation">
-            <div class="container">
-                <h2>Views Reels</h2>
-                <div class="pricelist-grid">
-                    <div class="pricelist-item"><span>1000 Views</span> <span class="harga">3k</span> <button class="btn-pesan" data-paket="1000 Views Reels" data-harga="3k" data-tipe="views">Pesan Sekarang</button></div>
-                    <div class="pricelist-item"><span>10000 Views</span> <span class="harga">30k</span> <button class="btn-pesan" data-paket="10000 Views Reels" data-harga="30k" data-tipe="views">Pesan Sekarang</button></div>
-                    <div class="pricelist-item"><span>20000 Views</span> <span class="harga">60k</span> <button class="btn-pesan" data-paket="20000 Views Reels" data-harga="60k" data-tipe="views">Pesan Sekarang</button></div>
-                    <div class="pricelist-item"><span>30000 Views</span> <span class="harga">90k</span> <button class="btn-pesan" data-paket="30000 Views Reels" data-harga="90k" data-tipe="views">Pesan Sekarang</button></div>
-                    <div class="pricelist-item"><span>50000 Views</span> <span class="harga">150k</span> <button class="btn-pesan" data-paket="50000 Views Reels" data-harga="150k" data-tipe="views">Pesan Sekarang</button></div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Paket Hemat -->
-        <section class="terlaris-section scroll-animation">
-            <div class="container">
-                <div class="paket-container">
-                    <div class="paket-hemat-card">
-                        <h3>Paket Hemat Instagram</h3>
-                        <p class="harga">90k</p>
-                        <ul>
-                            <li>1000 Followers</li>
-                            <li>2000 Likes Instagram</li>
-                            <li>10000 Views</li>
-                            <li>+ Bonus 5rb Views</li>
-                        </ul>
-                        <button class="btn btn-pesan"
-                                data-paket="Paket Hemat Instagram"
-                                data-harga="90k"
-                                data-tipe="paket-ig">
-                            Pesan Paket Hemat
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <footer>
