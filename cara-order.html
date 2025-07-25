@@ -5,73 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cara Order - Kios Sosmed</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">Kios Sosmed</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="instagram.html">Instagram</a></li>
-                    <li><a href="tiktok.html">TikTok</a></li>
-                    <li><a href="cara-order.html" class="active">Cara Order</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
+    <!-- Modern Navigation -->
+    <header class="modern-header">
+        <nav class="nav-container">
+            <a href="index.html" class="modern-logo"><span class="logo-icon">🚀</span><span class="logo-text">Kios<span class="accent">Sosmed</span></span></a>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="instagram.html" class="nav-link">Instagram</a></li>
+                    <li><a href="tiktok.html" class="nav-link">TikTok</a></li>
+                    <li><a href="cara-order.html" class="nav-link active">Cara Order</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
                 </ul>
-            </nav>
-            <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-            </button>
-        </div>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Buka menu"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+        </nav>
     </header>
 
-    <main>
+    <!-- Main Content -->
+    <main class="main-content">
         <div class="container">
-            <div class="page-header anim-fade-in">
+            <div class="page-header" data-aos="fade-up">
                 <h1>Cara Pemesanan</h1>
                 <p>Hanya 4 langkah mudah untuk memulai.</p>
             </div>
 
             <div class="steps-container">
-                <div class="step-item anim-fade-in">
+                <div class="step-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Pilih Paket</h3>
-                        <p>Jelajahi halaman layanan kami dan pilih paket yang sesuai dengan kebutuhan Anda.</p>
-                    </div>
+                    <div class="step-content"><h3>Pilih Paket</h3><p>Jelajahi halaman layanan kami dan pilih paket yang sesuai dengan kebutuhan Anda.</p></div>
                 </div>
-                <div class="step-item anim-fade-in">
+                <div class="step-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Klik Tombol Pesan</h3>
-                        <p>Anda akan diarahkan ke WhatsApp kami dengan format pesanan yang sudah terisi otomatis.</p>
-                    </div>
+                    <div class="step-content"><h3>Klik Tombol Pesan</h3><p>Anda akan diarahkan ke WhatsApp kami dengan format pesanan yang sudah terisi otomatis.</p></div>
                 </div>
-                <div class="step-item anim-fade-in">
+                <div class="step-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Lakukan Pembayaran</h3>
-                        <p>Admin akan memberikan instruksi pembayaran. Lakukan transfer dan kirim bukti pembayaran.</p>
-                    </div>
+                    <div class="step-content"><h3>Lakukan Pembayaran</h3><p>Admin akan memberikan instruksi pembayaran. Lakukan transfer dan kirim bukti pembayaran.</p></div>
                 </div>
-                <div class="step-item anim-fade-in">
+                <div class="step-item" data-aos="fade-up" data-aos-delay="400">
                     <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Pesanan Diproses</h3>
-                        <p>Setelah pembayaran terkonfirmasi, pesanan Anda akan segera kami proses. Enjoy!</p>
-                    </div>
+                    <div class="step-content"><h3>Pesanan Diproses</h3><p>Setelah pembayaran terkonfirmasi, pesanan Anda akan segera kami proses. Enjoy!</p></div>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <a href="index.html" class="logo">Kios Sosmed</a>
-            <p class="garansi-text">GARANSI 3X24 JAM ORDER TIDAK MASUK ADA PENGEMBALIAN DANA 100%</p>
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand"><a href="index.html" class="footer-logo"><span class="logo-icon">🚀</span><span class="logo-text">Kios<span class="accent">Sosmed</span></span></a><p class="footer-description">Layanan media sosial premium terpercaya.</p></div>
+                <div class="link-group"><h4>Services</h4><a href="instagram.html">Instagram</a><a href="tiktok.html">TikTok</a></div>
+                <div class="link-group"><h4>Support</h4><a href="cara-order.html">Cara Order</a><a href="faq.html">FAQ</a></div>
+            </div>
+            <div class="footer-bottom"><p class="footer-guarantee">🛡️ GARANSI 100% UANG KEMBALI</p><p>© 2024 Kios Sosmed. All rights reserved.</p></div>
         </div>
     </footer>
 
