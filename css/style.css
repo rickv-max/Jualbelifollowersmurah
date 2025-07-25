@@ -1,3 +1,5 @@
+/* css/style.css (FINAL, COMPLETE, AND CORRECTED VERSION) */
+
 :root {
     --primary-color: #4A2F20;
     --secondary-color: #6d4c41;
@@ -16,7 +18,8 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
-    line-height: 1.7;
+    line-height: 1.6; /* Penyesuaian kecil */
+    font-size: 15px; /* Ukuran font dasar untuk mobile */
     animation: fadeInAnimation ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -27,8 +30,50 @@ body {
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 img { max-width: 100%; height: auto; }
 
-h1 { font-size: 2rem; }
-h2 { font-size: 1.8rem; }
+/*
+======================================================
+=== BAGIAN BARU: FONT & TYPOGRAPHY SCALING (MOBILE-FIRST) ===
+======================================================
+*/
+
+/* Ukuran default untuk MOBILE */
+h1 { font-size: 1.9rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.1rem; }
+.logo { font-size: 1.3rem; }
+.hero-section p { font-size: 1rem; }
+.paket-hemat-card .harga { font-size: 2.2rem; }
+.pricelist-card .harga { font-size: 1.8rem; }
+.btn, .btn-pesan { padding: 10px 20px; font-size: 0.9rem; }
+
+
+/* Ukuran untuk TABLET ke atas */
+@media (min-width: 600px) {
+    body { font-size: 16px; } /* Kembalikan ke standar 16px */
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.9rem; }
+    h3 { font-size: 1.2rem; }
+    .hero-section p { font-size: 1.1rem; }
+}
+
+/* Ukuran untuk DESKTOP ke atas */
+@media (min-width: 850px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2.2rem; }
+    h3 { font-size: 1.3rem; }
+    .logo { font-size: 1.5rem; }
+    .paket-hemat-card .harga { font-size: 2.8rem; }
+    .pricelist-card .harga { font-size: 2.2rem; }
+    .btn, .btn-pesan { padding: 12px 28px; font-size: 1rem; }
+}
+
+/*
+====================================================
+=== BAGIAN LAMA (tetap ada dan dibutuhkan) ===
+====================================================
+*/
+
+/* General h1, h2, h3 styling (tanpa font-size) */
 h1, h2, h3 { color: var(--primary-color); margin-bottom: 1rem; line-height: 1.3; }
 
 /* === HEADER & NAVIGATION === */
@@ -39,63 +84,35 @@ header {
     z-index: 1000;
     transition: background-color 0.4s, backdrop-filter 0.4s, box-shadow 0.4s;
 }
-
 header.scrolled {
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
-
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-.logo {
-    font-size: 1.5rem;
+.logo { /* font-size dihapus dari sini karena dikontrol di atas */
     font-weight: 700;
     color: var(--primary-color);
     text-decoration: none;
-    z-index: 1001; /* Pastikan logo di atas nav mobile */
+    z-index: 1001;
 }
-
-/* Default state: Desktop navigation */
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-.main-nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 600;
-    padding-bottom: 5px;
-    position: relative;
-    transition: color 0.3s;
-}
-.main-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--primary-color);
-    transition: width 0.4s ease;
-}
+.main-nav ul { list-style: none; display: flex; gap: 1.5rem; }
+.main-nav a { text-decoration: none; color: var(--text-color); font-weight: 600; padding-bottom: 5px; position: relative; transition: color 0.3s; }
+.main-nav a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background-color: var(--primary-color); transition: width 0.4s ease; }
 .main-nav a:hover::after, .main-nav a.active::after { width: 100%; }
 .main-nav a:hover, .main-nav a.active { color: var(--primary-color); }
-.menu-toggle { display: none; } /* Hide burger on desktop */
-
+.menu-toggle { display: none; }
 
 /* === BUTTONS === */
-.btn, .btn-pesan {
+.btn, .btn-pesan { /* padding & font-size dihapus dari sini */
     display: inline-block;
     background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
     color: var(--white-color);
-    padding: 12px 25px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
@@ -105,186 +122,51 @@ header .container {
     cursor: pointer;
     text-align: center;
 }
-.btn:hover, .btn-pesan:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 7px 20px rgba(74, 47, 32, 0.3);
-}
+.btn:hover, .btn-pesan:hover { transform: translateY(-3px); box-shadow: 0 7px 20px rgba(74, 47, 32, 0.3); }
 
 /* === SECTIONS & CARDS === */
-section {
-    padding: 40px 0;
-}
-.hero-section {
-    text-align: center;
-    padding: 60px 0;
-}
-.keunggulan-section .container {
-    display: grid;
-    grid-template-columns: 1fr; /* Default 1 column for mobile */
-    gap: 2rem;
-    text-align: center;
-}
+section { padding: 40px 0; }
+.hero-section { text-align: center; padding: 50px 0; }
+.keunggulan-section .container { display: grid; grid-template-columns: 1fr; gap: 2rem; text-align: center; }
 .keunggulan-item .icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
-
-.terlaris-section, .paket-hemat-section {
-    background-color: #e9e4e0;
-}
+.terlaris-section, .paket-hemat-section { background-color: #e9e4e0; }
 .terlaris-section h2 { text-align: center; }
-.paket-container {
-    display: grid;
-    grid-template-columns: 1fr; /* Default 1 column */
-    gap: 2rem;
-    margin-top: 2rem;
-}
-.paket-hemat-card {
-    background: var(--card-background);
-    border: 2px solid var(--primary-color);
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-.paket-hemat-card ul { list-style: none; margin-bottom: 2rem; }
+.paket-container { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 2rem; }
+.paket-hemat-card { background: var(--card-background); border: 2px solid var(--primary-color); padding: 2rem; border-radius: 10px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+.paket-hemat-card ul { list-style: none; margin-bottom: 2rem; padding: 0; /* Perbaikan kecil */ }
 .paket-hemat-card ul li { margin-bottom: 0.5rem; }
-
-.testimoni-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Default 1 column */
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-.testimoni-card {
-    background-color: var(--background-color);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 5px solid var(--accent-color);
-}
+.testimoni-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2rem; }
+.testimoni-card { background-color: var(--background-color); padding: 1.5rem; border-radius: 8px; border-left: 5px solid var(--accent-color); }
 .testimoni-card h4 { margin-top: 1rem; margin-bottom: 0; }
-
-/* Pricelist Cards */
-.pricelist-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Default 1 column */
-    gap: 1.5rem;
-}
-.pricelist-card {
-    background: var(--card-background);
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.07);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    overflow: hidden;
-}
+.pricelist-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+.pricelist-card { background: var(--card-background); padding: 1.5rem; border-radius: 12px; box-shadow: 0 5px 25px rgba(0,0,0,0.07); text-align: center; transition: transform 0.3s, box-shadow 0.3s; position: relative; overflow: hidden; }
 .pricelist-card:hover { transform: translateY(-5px); }
 
 /* === FOOTER === */
-footer {
-    background-color: var(--primary-color);
-    color: rgba(255, 255, 255, 0.8);
-    padding: 2rem 1rem;
-    text-align: center;
-    margin-top: 4rem;
-}
+footer { background-color: var(--primary-color); color: rgba(255, 255, 255, 0.8); padding: 2rem 1rem; text-align: center; margin-top: 4rem; }
 footer .logo { color: var(--white-color); }
 footer .garansi-text { font-weight: 600; color: var(--white-color); }
 
-/*
-=========================================
-=== MEDIA QUERIES FOR RESPONSIVENESS ====
-=========================================
-*/
-
-/* TABLET VIEW */
+/* === MEDIA QUERIES FOR RESPONSIVENESS === */
 @media (min-width: 600px) {
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-
-    .keunggulan-section .container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .paket-container {
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-    }
-    .pricelist-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .testimoni-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .keunggulan-section .container { grid-template-columns: repeat(2, 1fr); }
+    .paket-container { grid-template-columns: repeat(2, 1fr); justify-content: center; }
+    .pricelist-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimoni-grid { grid-template-columns: repeat(2, 1fr); }
 }
-
-/* DESKTOP VIEW & MOBILE NAVIGATION HIDING */
 @media (min-width: 850px) {
-    .keunggulan-section .container {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .pricelist-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .testimoni-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    .keunggulan-section .container { grid-template-columns: repeat(4, 1fr); }
+    .pricelist-grid { grid-template-columns: repeat(3, 1fr); }
+    .testimoni-grid { grid-template-columns: repeat(3, 1fr); }
 }
-
-/* MOBILE NAVIGATION STYLES */
 @media (max-width: 849px) {
-    .menu-toggle {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 30px;
-        height: 25px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        z-index: 1001;
-    }
-    .menu-toggle .bar {
-        width: 30px;
-        height: 3px;
-        background-color: var(--primary-color);
-        border-radius: 10px;
-        transition: all 0.3s ease;
-    }
-
-    .main-nav {
-        position: fixed;
-        top: 0;
-        right: -100%; /* Start off-screen */
-        width: 280px;
-        height: 100vh;
-        background: var(--card-background);
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-        transition: right 0.4s ease-in-out;
-        z-index: 1000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .main-nav.active {
-        right: 0;
-    }
-    .main-nav ul {
-        flex-direction: column;
-        gap: 2rem;
-        text-align: center;
-    }
-    .main-nav ul a {
-        font-size: 1.2rem;
-    }
-    
-    /* Animation for burger icon */
-    .menu-toggle.active .bar:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 6px);
-    }
-    .menu-toggle.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle.active .bar:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -6px);
-    }
-}```
+    .menu-toggle { display: flex; flex-direction: column; justify-content: space-around; width: 30px; height: 25px; background: transparent; border: none; cursor: pointer; padding: 0; z-index: 1001; }
+    .menu-toggle .bar { width: 30px; height: 3px; background-color: var(--primary-color); border-radius: 10px; transition: all 0.3s ease; }
+    .main-nav { position: fixed; top: 0; right: -100%; width: 280px; height: 100vh; background: var(--card-background); box-shadow: -5px 0 15px rgba(0,0,0,0.1); transition: right 0.4s ease-in-out; z-index: 1000; display: flex; justify-content: center; align-items: center; }
+    .main-nav.active { right: 0; }
+    .main-nav ul { flex-direction: column; gap: 2rem; text-align: center; }
+    .main-nav ul a { font-size: 1.2rem; }
+    .menu-toggle.active .bar:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+    .menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.active .bar:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+}
