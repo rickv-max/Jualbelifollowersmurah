@@ -287,37 +287,38 @@ body {
     height: 3px;
     background-color: var(--gray-800);
     border-radius: var(--radius-sm);
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     position: absolute;
     left: 2.5px;
-    margin: 0;
 }
 
+/* Posisi Awal (Bentuk Hamburger) */
 .hamburger-line:nth-child(1) {
     top: 6px;
 }
 
 .hamburger-line:nth-child(2) {
-    top: 50%;
-    transform: translateY(-50%);
+    top: 13.5px;
 }
 
 .hamburger-line:nth-child(3) {
-    bottom: 6px;
+    top: 21px;
 }
 
+/* Posisi Akhir (Bentuk X saat aktif) */
 .nav-toggle.active .hamburger-line:nth-child(1) {
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
+    top: 13.5px; /* Pindah ke tengah */
+    transform: rotate(135deg);
 }
 
 .nav-toggle.active .hamburger-line:nth-child(2) {
     opacity: 0;
+    transform: translateX(-20px); /* Animasi menghilang ke samping */
 }
 
 .nav-toggle.active .hamburger-line:nth-child(3) {
-    top: 50%;
-    transform: translateY(-50%) rotate(-45deg);
+    top: 13.5px; /* Pindah ke tengah */
+    transform: rotate(-135deg);
 }
 
 .nav-toggle.active .hamburger-line:nth-child(1) { transform: rotate(45deg) translate(7px, 7px); }
