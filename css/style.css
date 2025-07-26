@@ -125,13 +125,6 @@ body {
     animation: pulse 2s infinite;
 }
 
-.loading-logo .accent {
-    background: linear-gradient(45deg, #00f2fe, #4facfe);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
 .loading-bar {
     width: 200px;
     height: 4px;
