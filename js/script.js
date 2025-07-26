@@ -1,18 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Modern Navigation Handler ---
+    // --- Modern Navigation Handler (ENHANCED for Mobile UX) ---
     const header = document.querySelector('.modern-header');
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
 
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+            // Toggle kelas 'active' untuk animasi tombol dan menu
+            const isMenuOpen = navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
+
+            // FOKUS RESPONSIVITAS: Mencegah body di-scroll saat menu terbuka
+            if (isMenuOpen) {
+                document.body.classList.add('no-scroll');
+            } else {
+                document.body.classList.remove('no-scroll');
+            }
         });
     }
     
-    // Add scrolled class to header
+    // Add scrolled class to header (Fungsi asli dipertahankan)
     if (header) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -23,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- FAQ Accordion Handler ---
+    // --- FAQ Accordion Handler (Fungsi asli dipertahankan) ---
     const faqItems = document.querySelectorAll('.faq-item');
     if (faqItems.length > 0) {
         faqItems.forEach(item => {
@@ -31,12 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
             question.addEventListener('click', () => {
                 const isActive = item.classList.contains('active');
                 
-                // Close all other items
                 faqItems.forEach(otherItem => {
                     otherItem.classList.remove('active');
                 });
 
-                // Open the clicked one if it wasn't already active
                 if (!isActive) {
                     item.classList.add('active');
                 }
@@ -44,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // --- AOS (Animate on Scroll) Handler ---
+    // --- AOS (Animate on Scroll) Handler (Fungsi asli dipertahankan) ---
     const aosElements = document.querySelectorAll('[data-aos]');
     if (aosElements.length > 0) {
         const observer = new IntersectionObserver((entries) => {
@@ -63,12 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Animated Counter for Stats (Homepage) ---
+    // --- Animated Counter for Stats (Homepage) (Fungsi asli dipertahankan) ---
     const animatedCounters = document.querySelectorAll('.stat-number[data-target]');
     if (animatedCounters.length > 0) {
         const animateCounter = (el) => {
             const target = +el.getAttribute('data-target');
-            const duration = 2000; // 2 seconds
+            const duration = 2000;
             const stepTime = 20;
             const steps = duration / stepTime;
             const increment = target / steps;
@@ -99,17 +105,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Loading Screen (Homepage only) ---
+    // --- Loading Screen (Homepage only) (Fungsi asli dipertahankan) ---
     const loadingScreen = document.getElementById('loadingScreen');
     if (loadingScreen) {
         const progressBar = loadingScreen.querySelector('.loading-progress');
         
-        // Start loading simulation
         progressBar.style.width = '100%';
 
-        // Wait for animation to finish then hide
         setTimeout(() => {
             loadingScreen.classList.add('hidden');
-        }, 2500); // 2.5 seconds
+        }, 2500);
     }
 });
