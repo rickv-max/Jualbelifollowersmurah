@@ -125,6 +125,12 @@ body {
     animation: pulse 2s infinite;
 }
 
+.loading-logo .logo-text .accent {
+    background: none;
+    color: var(--white);
+    -webkit-text-fill-color: var(--white);
+}
+
 .loading-bar {
     width: 200px;
     height: 4px;
