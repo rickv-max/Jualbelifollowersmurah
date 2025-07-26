@@ -270,23 +270,19 @@ body {
 .nav-link:hover, .nav-link.active { color: var(--primary-color); }
 .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 
-.nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: var(--space-sm);
-    z-index: 1001;
+nav-toggle.active .hamburger-line:nth-child(1) {
+    /* Pindahkan garis ke posisi tengah, LALU putar */
+    transform: translateY(7px) rotate(45deg);
 }
 
-.hamburger-line {
-    width: 25px;
-    height: 3px;
-    background: var(--gray-800);
-    margin: 4px 0;
-    transition: all var(--transition-normal);
-    border-radius: var(--radius-sm);
-    display: block;
+.nav-toggle.active .hamburger-line:nth-child(2) {
+    /* Hilangkan garis tengah */
+    opacity: 0;
+}
+
+.nav-toggle.active .hamburger-line:nth-child(3) {
+    /* Pindahkan garis ke posisi tengah, LALU putar ke arah berlawanan */
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 .nav-toggle.active .hamburger-line:nth-child(1) { transform: rotate(45deg) translate(7px, 7px); }
